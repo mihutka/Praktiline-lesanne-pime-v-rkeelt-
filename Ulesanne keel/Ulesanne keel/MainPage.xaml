@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Ulesanne_keel.MainPage">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Sõnade õppimine" 
+               FontSize="24" 
+               HorizontalOptions="Center" />
+
+        <Frame x:Name="CardFrame"
+               BorderColor="Gray"
+               CornerRadius="10"
+               Padding="10"
+               Margin="10">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnCardTapped"/>
+            </Frame.GestureRecognizers>
+            <VerticalStackLayout>
+                <Label x:Name="WordLabel" FontSize="20"/>
+                <Label x:Name="TranslationLabel" FontSize="16" TextColor="Gray" IsVisible="False"/>
+                <Label x:Name="ExplanationLabel" FontSize="14" TextColor="DarkGray" IsVisible="False"/>
+                <Label x:Name="CategoryLabel" FontSize="14" TextColor="Blue" IsVisible="False"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Lisa uus sõna" Clicked="OnAddWordClicked" />
+            <Button Text="Muuda sõna" Clicked="OnEditWordClicked" />
+            <Button Text="Kustuta sõna" Clicked="OnDeleteWordClicked" />
+        </HorizontalStackLayout>
+
+        <Button Text="Следующая карточка" Clicked="OnNextCardClicked" HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
