@@ -11,7 +11,7 @@ namespace Ulesanne_keel
         public string SonaTekst { get; set; } // Слово
         public string Tolge { get; set; }     // Перевод
         public string Selgitus { get; set; }  // Объяснение
-        public string Kategooria { get; set; } // Категория ("õppimisel", "õpitud", "kordamisel")
+        public string Kategooria { get; set; } // Категория 
 
         public Sona(string sonaTekst, string tolge, string selgitus, string kategooria)
         {

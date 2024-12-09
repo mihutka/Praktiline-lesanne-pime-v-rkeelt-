@@ -21,7 +21,7 @@ namespace Ulesanne_keel
             EnsureFileExists();
             LoadWords();
 
-            // После загрузки слов сразу отображаем случайную карточку
+            
             ShowRandomCard();
         }
 
@@ -73,7 +73,7 @@ namespace Ulesanne_keel
             }
         }
 
-        // Показать случайную карточку
+        
         private void ShowRandomCard()
         {
             if (Sonad.Count == 0)
@@ -93,7 +93,7 @@ namespace Ulesanne_keel
             ExplanationLabel.Text = currentSona.Selgitus;
             CategoryLabel.Text = currentSona.Kategooria;
 
-            // Изначально показываем только слово
+            
             isRevealed = false;
             TranslationLabel.IsVisible = false;
             ExplanationLabel.IsVisible = false;
@@ -104,7 +104,7 @@ namespace Ulesanne_keel
         {
             if (currentSona == null) return;
 
-            // Переключаем состояние видимости
+            
             isRevealed = !isRevealed;
             TranslationLabel.IsVisible = isRevealed;
             ExplanationLabel.IsVisible = isRevealed;
